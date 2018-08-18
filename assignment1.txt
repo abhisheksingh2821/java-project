@@ -1,0 +1,21 @@
+sol 1 >
+
+public class hello
+{
+	public static void main(String args[])
+	{
+	
+	System.out.println("Hello First");
+	}
+}
+
+
+sol 2 >
+public class name
+{
+	public static void main(String args[])
+	{
+	
+	System.out.println("Abhishek Singh");
+	}
+}
