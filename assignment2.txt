@@ -1,0 +1,201 @@
+SOL -1
+
+import java.util.Scanner;
+public class sum
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = a + b;
+        System.out.println("ans is "+ c);
+    }
+}
+
+*-----------------------------*
+
+SOL - 2
+
+import java.util.Scanner;
+class leap
+{
+	public static void main(String args[])
+	{
+	int a;
+	Scanner sc= new Scanner (System.in);
+	a=sc.nextInt();
+	if(((a%4==0) && (a%100!=0))||(a%400==0))
+   { 
+	System.out.print(a+" leap year");
+   }
+   else
+   { 
+System.out.print(a+" is not leap year");	
+	}
+}
+}
+
+*-----------------------------*
+
+SOL 3:
+
+import java.util.Scanner;
+class pattern
+{
+public static void main(String args[])
+{
+int a,i,j;
+ //Scanner sc= new Scanner(System.in);
+ //a=sc.nextInt();
+ for(i=0;i<4;i++)
+ {
+ for(j=0;j<=i;j++)
+ {
+    System.out.print("*");
+ }
+  System.out.println("\n");
+ }
+
+}
+}
+
+
+
+*-----------------------------*
+
+SOL 4:
+
+import java.util.Scanner;
+public class gret
+{
+	public static void main(String args[])
+	{
+	Scanner sc= new Scanner(System.in);
+	int a=sc.nextInt();
+	int b=sc.nextInt();
+	int c=sc.nextInt();
+
+
+	if(a>b && a>c)
+	{
+		System.out.println("a is greatest");
+	}
+	if(b>a && b>c)
+	{
+		System.out.println("b is greatest");
+	}
+	if(c>a && c>b)
+	{
+	System.out.println("c is greatest");
+	}
+
+	if(a==b && b==c)
+	{
+		System.out.println("all no.s are equal");
+	}
+	if(a==b && a>c )
+	{
+		System.out.println("a and b are greatest");
+	}
+	if(a==c && a>b )
+	{
+		System.out.println("a and c are greatest");
+	}
+	if(b==c && b>a )
+	{
+		System.out.println("b and c are greatest");
+	}
+}
+}
+
+
+*-----------------------------*
+
+SOL 5:
+
+import java.util.Scanner;
+public class palin
+{
+	public static void main(String args[])
+{
+	Scanner sc= new Scanner(System.in);
+	int a=sc.nextInt();
+  int num,rem,rev=0;
+  num=a;
+  while(a!=0)
+  {
+    rem=a%10;
+    rev=(rev*10)+rem;
+    a=a/10;
+  }
+  if(rev==num)
+  {
+	System.out.println("PALINDROME");
+	}
+  else
+  {
+   
+    System.out.println("NOT PALINDROME");
+  }
+  }
+	
+}
+
+*-----------------------------*
+
+SOL 6:
+
+import java.util.Scanner;
+public class prime
+{
+	public static void main(String args[])
+	{
+	Scanner sc= new Scanner(System.in);
+	int a=sc.nextInt();
+    int i,max = 0;
+if(a == 1)  max = 1;
+if(a != 1)
+{  
+  for (i=2;i<=a/2;i++)
+{
+    if(a%i==0)
+    {
+      max=1;
+    }
+   
+}
+}
+ if(max!=1)
+   
+    {
+System.out.println("Prime");
+      }
+else System.out.println("NOT Prime");
+
+}
+  }
+
+*-----------------------------*
+
+SOL 7 :
+
+import java.util.Scanner;
+public class rev
+{
+	public static void main(String args[])
+{
+	Scanner sc= new Scanner(System.in);
+	int a=sc.nextInt();
+  int num,rem,rev=0;
+  num=a;
+  while(a!=0)
+  {
+    rem=a%10;
+    rev=(rev*10)+rem;
+    a=a/10;
+  }
+System.out.println(rev);
+}
+}
+
