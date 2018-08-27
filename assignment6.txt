@@ -1,0 +1,92 @@
+Sol 1 :
+
+class Abhi
+{
+	int x=10;
+	void display()
+	{
+		System.out.println("value of x is: "+x);
+	}
+}
+class Abhishek extends Abhi
+{
+	
+	void display()
+	{
+		System.out.println("Assignment6");
+	}
+	void show()
+	{
+	super.display();
+	}
+}
+public class invoke {
+
+	public static void main(String[] args) {
+		Abhishek obj=new Abhishek();
+		obj.show();
+
+	}
+
+}
+
+
+
+*--------------------------------*
+
+
+Sol 2 :
+
+class Abhi
+{
+	int x;
+	Abhi()
+	{
+		x=10;
+	}
+	Abhi(int x)
+	{
+		this();
+	}
+	void display()
+	{
+		System.out.println("value of x is: "+x);
+	}
+}
+
+public class calling {
+
+	public static void main(String[] args) {
+		
+Abhi obj=new Abhi(50);
+obj.display();
+	}
+
+}
+
+
+
+*----------------------------------*
+
+Sol 3 :
+
+
+final class Abhi
+{
+	int x=10;
+	void display()
+	{
+		System.out.println(x);
+	}
+	
+}
+
+public class noextension {
+
+	public static void main(String[] args) {
+	
+Abhi obj=new Abhi();
+obj.display();
+	}
+
+}
