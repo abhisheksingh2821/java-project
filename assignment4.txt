@@ -1,0 +1,198 @@
+Sol 1 :
+-------
+
+import java.util.Scanner;
+class area
+{
+  private double length;
+  private double breadth;
+
+  public double getLength()
+  {
+	return length;
+  }
+  public void setLength(double x)
+  {
+	length = x;
+  }
+  public double getBreadth()
+  {
+	return breadth;
+  }
+  public void setBreadth(double x)
+  {
+	breadth = x;
+  }
+  public void CalculateArea()
+  {
+	double area = length * breadth;
+	System.out.println("The area of rectangle is "+area);
+  }
+}
+
+public class rectangle
+{
+  public static void main(String[] args)
+  {
+	area a = new area();
+	Scanner sc = new Scanner(System.in);
+	double l = sc.nextDouble();
+	double b = sc.nextDouble();
+	a.setLength(l);
+	a.setBreadth(b);
+	a.CalculateArea();
+  }
+
+}
+
+
+
+*--------------------------*
+
+
+Sol 2 :
+-------
+
+
+import java.util.Scanner;
+class find
+{
+  private int real;
+  private int imag;
+
+  public int getReal()
+  {
+	return real;
+  }
+  public void setReal(int x)
+  {
+	real = x;
+  }
+  public int getImag()
+  {
+	return imag;
+  }
+  public void setImag(int x)
+  {
+	imag = x;
+  }
+  public void Display()
+  {
+
+	System.out.println("The complex no  is "+real+" + "+imag+"i");
+  }
+}
+
+public class complex
+{
+  public static void main(String[] args)
+  {
+	find a = new find();
+	Scanner sc = new Scanner(System.in);
+	int real = sc.nextInt();
+	int imag = sc.nextInt();
+	a.setReal(real);
+	a.setImag(imag);
+	a.Display();
+  }
+
+}
+
+
+*------------------------------*
+
+Sol 3 :
+-------
+
+
+import java.util.*;
+public class sec
+{
+	public static void main(String[] args)
+	{
+		int x[] = new int[10];
+		Scanner sc = new Scanner(System.in);
+    
+		for(int i =0;i<10;i++)
+        {
+            x[i]=sc.nextInt();
+        }
+       for(int i = 0;i < 10;i++)
+		{
+		  for(int j = i + 1;j < 10;j++)
+		   {
+			if(x[i] > x[j]) 
+			{
+				int tmp = x[i];
+				x[i] = x[j];
+				x[j] = tmp;
+			}
+		   } 
+           
+       
+    } System.out.println(x[8]);
+}
+    
+}
+
+
+*-------------------------------------*
+
+
+Sol 4 :
+
+import java.util.*;
+class SBLOCK {
+    static int i;
+    int j;
+    static {
+        i = 10;
+        System.out.println("static block ");
+    }
+    SBLOCK(){
+        System.out.println("Constructor");
+    }
+}
+ 
+public class Main {
+    public static void main(String args[]) {
+ 
+       SBLOCK t1 = new SBLOCK();
+       SBLOCK t2 = new SBLOCK();
+    }
+}
+
+
+*---------------------------*
+
+
+Sol 5 :
+
+
+import java.util.Scanner;
+
+public class wavearray
+{
+  public static void main(String[] args)
+  {
+	Scanner sc = new Scanner(System.in);	
+	int []a = new int[10];
+	for(int i = 0; i < 10; i++)
+	{
+	 a[i] = sc.nextInt();
+	}
+	for(int j = 0; j < 10; j += 2)
+	{
+		int tmp = a[j];
+		a[j] = a[j + 1];
+		a[j + 1] = tmp;
+	}
+
+	for(int i = 0; i < 10; i++)
+	{
+		System.out.print(a[i]+" ");
+	}
+	
+  }
+
+}
