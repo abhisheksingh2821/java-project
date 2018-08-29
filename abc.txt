@@ -1,16 +1,432 @@
-git commands:
-1. git init <to add folder to git>
-2. git touch <to create a file>
-3. git status <for status>
-4. git add . <for all files>
-5. git add filename with extension <for individual file>
-6. git config 
+ => git commands:
+
+ 1. git init <to add folder to git>
+ 2. git touch <to create a file>
+ 3. git status <for status>
+ 4. git add . <for all files>
+ 5. git add filename with extension <for individual file>
+ 6. git config 
 	--global <for all the projects of a user>
 	--local <for a particular project>
 	--system <for all the projects of all the users in the system>
-7. git config --local user.name "Abhishek singh"
-8. git commit -m "message"
-9. git remote add origin <url>
-10. git remote show origin
-11. git push -u origin master <for login page>
-12. 
+ 7. git config --local user.name "Abhishek singh"
+ 8. git commit -m "message"
+ 9. git remote add origin <url>
+ 10. git remote show origin
+ 11. git push -u origin master <for login page>
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ java is platform independent language.
+
+ -program files=64 bit files.
+ -program files(x86)=32 bit files.
+ -jre=java run time environment.
+ -jdk=java development kit.
+ -jre is included in jdk.
+ -jvm=java virtual machine(part of jre which actually execute the byte code)(it is platform dependent).
+ -java is not pure object oriented language.
+ -jvm access the main() of the program.
+ -for static variable and static functions there is no need to create object(thats why we declare main() as static in the program,so that we can access it without  creating an object).
+ -we declare main() as a void which specifies that main will not return anything(it will return NULL).
+ -it is possible to overload main() of the program  but jvm will access only standard  definiton.
+ -upper camel case(StudentNameList) are used to declare class and interface name.
+ -lower camel case(studentNameList) are used to declare function() and variable name.
+ -out (in System.out.println) is an object of PrintStream class.
+ -String class and System class is a part of package called java.lang package.
+ -java.lang is imported automatically.
+ -PrintStream class is a part of java.io package.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ => DATATYPES:
+
+ {variables are used to represent single value whereas functions are used to represent lines of code,purpose of both is to represent data.
+ difference is in -implementation
+		 -memory allocation.}
+
+ ->types of datatypes:
+
+ 1> primitive datatypes (which cannot be divided further into different datatypes).there are 8 types of primitives datatypes in java thats why java is not pure object   oriented language.
+ 2> non-primitive datatypes (which can be made using(combining) primitive datatypes) ex:object,classes.
+
+ 1> primitive datatypes:
+
+ ->numeric datatypes:
+	1-byte(8 bits)
+	2-short(2 bytes)
+	3-int(4 bytes) 
+	4-long(8 bytes)
+
+ ->floating point datatypes:
+	5-float()
+	6-double()
+ {the default datatype of integer value is int.the default datatype of decimal(6.2) value is double.} 
+
+ ->character datatypes:
+	7-char(2 bytes)
+ {there are only 256 characters in ASCII system (default character set of C,C++)}
+ {UNICODE system (default character set of JAVA) has a capacity of converting 65536 symbols} 	
+ 
+	8-boolean datatype (true or false).
+
+ {there are some functions method in which we have to pass string as parameter not integer value,it can be achieved easily by adding a blank string with a integer.}
+	Ex:		{
+			int a;
+			a=10;
+		System.out.println(a+""); //(it will convert integer into a string)
+			}
+
+ => OPERATORS:
+	operators are special symbols that performs a special operatiion.
+
+ ->types of operators:
+ 
+ 1)Arithmatic operators :
+	(+),(-),(*),(/),(%)
+
+ 2)relational operators :
+	(>),(<),(>=),(<=)
+ 
+ 3)logical operator:
+	(&&),(||),(!)
+
+ 4)equality: 	
+	(==)
+
+ 5)Assignment :
+	(=)
+
+ => CONTROL STATEMENTS:
+	statements by which we can control the flow of execution.
+
+ 1)conditional statements/decision control statements :
+	- IF statement :
+		if(condition)
+			{
+			statements;
+			}
+
+		 {in java 0 doesn't mean false}
+
+		if(true)
+			{
+			statements;
+			}  //(it will always run)
+
+	- multiple IF statement :
+
+		int a;
+		a=-9;
+		if(a>0)
+		{
+		System.out.println("positive");
+		}
+		if(a=0)
+		{
+		System.out.println("negative");
+		}
+		if(a<0)
+		{
+		System.out.println("negative");
+		}
+		
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ => SWITCH :
+ 
+ -if works on boolean value,switch does not.
+ -in switch,without using break we can combine two cases.
+ -we cannot use variable in case expression.ex case a+1 gives error.
+ -default datatype of decimal value is double,and we cannot implicitly convert higher datatype to lower datatype(double cannot be converted into float).
+ -switch does not accept floating point value.
+ -float a = 1.0 give error because 1.0 is treated as double and implicit conversion from double to int is not allowed.
+ -java switch statement can accept int,char and string values.
+ 	ex:
+		string ch="a";
+		switch(ch)
+			{
+			case"a" : system.......
+			}
+		char ch="a";
+		switch(ch)
+			{
+			case"a" : system.......
+			}
+			
+ { team which created an application also tests their own application then this testing is called alpha testing whereas when random people from the public tests the    application then this testing is called beta testing.development on java started in 1991,beta version  introduced in 1995 and officailly released in 1996 }
+
+ 2)loop control statement :
+ 
+ -> types of loops :
+	-while (when only condition is known)
+	-dowhile
+	-for
+	-foreach : ( to access array always use this loop ) 	
+			int x[]={10,20,30};
+			for(int i : x)
+			{
+			System.out.println(x);
+			}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+ => ARRAYS :
+
+	In java arrays are object.all the objets are always created in the heap.to create object we need to call the constructor of the class with keyword new.
+	reference variable are those variables which refers or points to a particular object.
+	{java does not support user defined pointers}
+
+ -> command line argument:(to print array from cmd prompt)
+
+	public class demo
+	{
+	public static void main(String[] x)
+	{
+	for(String y:x)
+	{
+	System.out.println(y)
+	}
+}	
+}
+
+
+ { all the predefined classes which are required to run java application are present in rt.jar (run time)}
+
+
+ -> Scanner:
+ 	
+	import java.util.*;
+	public class demo
+	{
+	public static void main(String [] x)
+	{
+		 Scanner sc = new Scanner(System.in);
+		 int a = sc.nextInt();
+		 float b = sc.nextFloat();
+		 short c = sc.nextShort();
+		 long d = sc.nextLong();
+		 double e = sc.nextDouble(); 
+ 		 string s= sc.next(); //for single word
+ 		 string ss = sc.nextLine(); 
+  		 char ch = sc.next().charAt(0); //for a character
+	}
+
+ 
+ {in expression which is the highest datatype,answer will be evaluated in that only.Ex: float f= 5.0/2;//answer will be in double because 5.0 is highest and its datatype is double.Ex: float f=5/2;//answer will be in int because 5 is highest and its datatype is int.}
+
+ ->parse int :
+  
+  import java.util.*;
+	public class demo
+	{
+	public static void main(String [] x)
+	{ 
+    int a = Integer.parseInt(x[0]);
+    float f= Float.parseFloat(x[0]);
+    }
+    }
+    
+
+    {Any file can contain atmost one public class or interface}
+
+
+ -> variables can be:
+                    -local : variables that are declared in the block or function.
+                    -instance : variables that are declared directly in the class.
+                    -static : 
+
+        Ex:
+            class test
+            {
+            int data; //instance variable
+            public int getData()
+            {
+            int z; //local variable
+            return data;
+            }
+            }
+    
+{we create getter and setter methods to access instance variable.}
+
+
+-> how to declare a class :
+
+    
+            class test
+                {
+                private int data;
+                public int getData() //getter method
+                {
+                return data;
+                }
+                public void setData(int x) // setter method (its return type will always be same as varaible datatype)
+                {
+                data = x;
+                }
+                }
+            public class Demo
+                        {
+                        	public static void main(String [] x)
+                            {
+                            test t = new test();
+                            t.setData();
+                            System.out.println(t.getData());
+                            }
+                        }
+
+{POJO : Plain Old Java Object.(classes which have instance variable which is private,and have getter and setter method to access the variable )}
+
+
+->   when a code is compiled firstly main function is stored in the stack memory(local variable of the same function will be stored in the same        block),and then other functions of the code will be stored,and the function which is at the top of the stack memory,will be the first            function to complete its execution,then the one below this function in the stack memory will complete its execution and so on,main function      will  complete its execution at last.local variable will remain in the memory till its function is in memory,if the function is removed from      the stack then local variable will also be removed as they are stored in the same block of memory in which the function is stored.
+
+    {task to clear the heap pmemory is done by a program called garbage collector}
+
+    {java never give u garbage value,if u forgot to initialize the variable,it will either give u error or initialize the vaiable with its default value.default value of int=0,byte=0,short=0,float=0.0f,double=0.0d,long=0l,string=NULL,boolean=false,char='u0000'.Static variables can also be initialized by deault value}
+
+    {static variables are shared among all the objects of the class,thats why static variable also called class level variable}          
+    {we cannot access non static variable from a static function.if we want to access that variable then we hav eto create object of the class in the same static function.}
+    
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+=> CONSTRUCTORS :
+
+    A constructor is a special member function of a class whose name is same as the class.Constructor does not have any return type,it does not return any value,their general purpose is to initialize variables.They called automatically when the object of class is created.Only that constructor is called default constructo which is added by a compiler itself.
+    Constructor which are added by a programmer can be :
+    -parametrized constructor.
+    -non parametrized constructor.(in which do not pass any parameter)
+    
+ => INHERITANCE :
+ 
+  {java does not support multiple inheritance to avoid problem of ambiguity.}
+  
+  -> polymorphism : when an entity exists in more than one form then this is called polymorphism.
+                        -run time polymorphism
+                        -compile time polymorphism
+                        
+    {we cannot override static methods.}
+    {it is possible to overload constructor.}
+    {object class is the parent class of all java classes.}
+    {we cannot inherit(extends) a class when the final keyword is attached with that class.}
+    {we cannot change value of final variable.}
+    {we cannot override final methods.}
+    
+- recursive constructor call error : 
+
+-> ABSTRACT CLASS : 
+                    function whose body does not exist,we only declare that function,these are called abstract functions or methods.
+
+ class in which any abstact method is there then we should also make that class a abstract class.
+ {it is not possible to create object of abstract class.}
+ {we cannot make class final as well as abstract simultaneously.}
+ 
+ Example of abstract class :
+ 
+  
+  import java.util.*;
+ abstract class animals{
+ public void eat()
+ {
+   System.out.println("i m eating");
+ }
+ abstract public void display();
+ }
+
+class dog extends animals
+{
+
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+=> INTERFACES :
+
+ 
+ In interfaces we do not declare normal variables,variable declaration in inerfaces are constants which are by default (publlic final static) and methods in interfaces are by default (public abstract).It is not possible to create object of an interface.
+ 
+ concrete class : class in which no abstract method is available (class which is not abstract is called concrete class)
+ 
+ if we want to implement properties of interfaces by using class we can use implements keyword.
+ EX :
+        class demo implements B
+        {
+        
+        }
+        
+        the implementing class needs to implement all the methods present in the interface otherwise the class needs to be declared Abstract.
+        A class can implement more than one interface at a time.
+         EX :
+                        class demo implements B,C,D
+                                {
+        
+                                }
+
+**Ques > what is the difference between abstract class and interface ?**
+        
+**Ans > -interfaces does not hava a constructors.(A class cannot extends(inherit) an interface, a class can only implement interfaces)
+        -Abstract class does contain contructors.
+        
+        -An interface can extends another interface.(only code duplication takes place,no inheritance hierarchy is created)
+        -An interface cannot implements another interface.
+        -we can create reference variable of iterfaces.
+        
+        
+{we can provide more access in method overriding we cannot provide less access.
+ access specifiers are :
+                        -Public
+                        -protected
+                        -default
+                        -private                     }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

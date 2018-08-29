@@ -1,0 +1,95 @@
+Sol 1 :
+
+public interface Animals {
+    void speak();
+    void eat();
+
+    public static void main(String[] args) {
+      Dog d=new Dog();
+      d.speak();
+      d.eat();
+      cat c=new cat();
+      c.speak();
+      c.eat();
+	}
+
+}
+ class Dog implements Animals{
+	public void speak() {
+		System.out.println("dog bark.");
+	}
+	public void eat() {
+		System.out.println("dog eat meat");
+	}
+ }
+ class cat implements Animals{
+		public void speak() {
+			System.out.println("cat meow.");
+		}
+		public void eat() {
+			System.out.println(" cat eat veggies.");
+		}
+
+}
+
+*---------------------------*
+
+Sol 2 :
+
+
+abstract class animals {
+	String breed,colour,name;
+	abstract void eat();
+	void speak() {
+		System.out.println("Speaking.");
+	}
+}
+class dog extends animals{
+	dog(String breed,String colour,String name){
+	this.breed=breed;
+	this.colour=colour;
+	this.name=name;
+	}
+	void me() {
+		System.out.println("Name is: "+name);
+		System.out.println("Breed is: "+breed);
+		System.out.println("Colour is: "+colour);
+	}
+
+	void eat(){
+		System.out.println("I eat flesh");
+			}
+
+}
+public class main {
+
+	public static void main(String[] args) {
+		
+     animals an=new dog("Retriever","Brown","Bruno");
+	dog d=new dog("Retriever","Brown","Bruno");
+     d.me();
+    an.eat();
+	an.speak();
+	}
+
+}
+
+
+*-------------------------------------*
+
+Sol 3 :
+
+
+import java.util.Scanner;
+public class Number
+{
+	public static void main(String args[])
+	{
+		String a,b;
+		Scanner sc = new Scanner(System.in);
+		a = sc.next();
+		b = sc.next();
+		int c = Integer.parseInt(a) + Integer.parseInt(b);
+		System.out.println("The sum of two string number "+c);
+	}
+}
