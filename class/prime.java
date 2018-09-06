@@ -5,25 +5,28 @@ public class prime
 	{
 	Scanner sc= new Scanner(System.in);
 	int a=sc.nextInt();
-    int i,max = 0;
+int max=0;
 if(a == 1)  max = 1;
 if(a != 1)
-{  
-  for (i=2;i<=a/2;i++)
+   {
+    int i;
+for(int j=2 ;j<a;j++)
 {
-    if(a%i==0)
+max=0;
+    for (i=2;i<=j/2;i++)
+{
+    if(j%i==0)
     {
       max=1;
     }
-   
-}
-}
- if(max!=1)
+    }
+     if(max!=1)
    
     {
-System.out.println("Prime");
+System.out.println(j);
       }
-else System.out.println("NOT Prime");
-
+    }
+  
+} 
 }
   }

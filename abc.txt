@@ -375,58 +375,245 @@ class dog extends animals
                         -private                     }
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+{monty hall problem}
 
 
+-----------------------------------------------------------------------------------------------------------------------------------------------
+        
+        
+=> BUILDING STRING AND HANDLING EXCEPTION :
+
+    -Group of character is called string.In java strings are objects of String class.
+    
+    syntax : String s = new String ("ABC");
+                or String s = "ABC" ;
+                
+        
+        -IN java string objects are immutable which means their value cannot be change once the value is set.
+                    
+                    private final char [] values;
+        
+        There are 3 ways to compare strings in java:
+        -by equals() method : (compares values and its return type is boolean either true or false)
+        -by == operator : (compares object,not values)
+        -by compareTo() method : (compares values and returns value i.e. +ve,-ve or 0 and generally used for sorting purpose)
+        
+        -whenever we use new keyword,everytime a new object will be created.
+        -Part of memory in which string objects are stored is called String Constant Pool.
+        -Strings class is final class thats why we cannot extends(inherit) string class in java.
+        -even in java,internally strings are implemented in the form of character array.
+        
+        ->String concatination:
+         
+            - by (+) operator
+            - by s1.concat(s2)
+            
+            Sub String :
+            
+            S = "ABCDE";
+                 01234
+                 
+             s.substring(1,3);
+             
+             output : BC
+            
+        
+        s.substring(1,12); //this will give exception (string index out of bound)
+        
+        -> String Buffer class / String Builder class : it is used for using mutable strings,in which we want to modify the string.
+        
+        
+       => EXCEPTION HANDLING :
+            IN java exceptions are created as object.
+            
+        ->Throwable Class :
+        
+                -Error
+                
+                -Exceptions :
+                    - checked exceptions (compiler checks that the exception is handled properly or not)
+                    - unchecked exceptions (compiler does not check whether the exception is handled properly or not)
+        
+        
+        -> keywords in exception handling :
+                        
+                        -TRY
+                        -CATCH
+                        -FINALLY
+                        -THROW
+                        -THROWS
+        
+        
+        public class demo
+        {
+        	public static void main(String args[])
+            {
+            int a=5;
+            int b=0;
+            int c =0 ;
+            
+            try 
+            {
+            c = a/b;    //jvm creates object of  ArithmeticException class automatically
+             System.out.println("inside try");
+            }
+            
+            catch(Exception e)
+            {
+            System.out.println(e);
+            }
+            finally
+            {
+             System.out.println("inside finally")
+            }
+            System.out.println("hello");
+            }
+        }  
+        
+        
+        
+     
+        
+        
+    -Finally block always execute whether the exception is occured or not.
+    -try cannot be exist alone,there should be catch or finally block associated with it.
+    -
+        
+        
+                
+        public class demo
+        {
+        	public static void main(String args[])
+            {
+            int a=5;
+            int b=0;
+            int c ;
+            
+            try 
+            {
+            throw new ArithmeticException () ;   //creating object of  ArithmeticException class by user
+            // System.out.println("inside try");    //this will give error as it is confirm that the exception will generate
+            }
+            
+            catch(Exception e)
+            {
+            System.out.println(e);
+            }
+            finally
+            {
+             System.out.println("inside finally")
+            }
+            System.out.println("hello");
+            }
+        }
+        
+        
+        ---------
+        
+        
+        class Demo{
+        public void fun() throws ArithmeticException
+        {
+        int c = 5/0;
+        }
+        }
+        
+        public class test
+        {
+        	public static void main(String args[])
+            {
+        
+                Demo d = new Demo();
+                
+                try{
+                d.fun();
+                
+                }
+                
+                catch(ArithmeticException e)
+                {
+                 System.out.println(e);
+                }
+                   System.out.println("hello");
+            }
+        }
+        
+
+ => NESTED TRY & CATCH :
+
+    
+
+          
+        public class demo
+        {
+        	public static void main(String args[])
+            {
+            int a=5;
+            int b=0;
+            int c ;
+            
+            int a[] = new int[5];
+            
+            try 
+            {
+            c = a/b;   
+                try{
+                
+             System.out.println(y[10]);
+                 }
+            
+            catch(ArrayIndexOutOfBoundException f)
+            {System.out.println(f)
+            }
+            }
+            catch(Exception e)
+            {
+            System.out.println(e);
+            }
+          
+            System.out.println("hello");
+            }
+        }
+
+ -checked exceptions needed to be handled properly
+ -we can include multiple catch statements with single try block.
+ -when we use multiple catch then parent class cannot come before child class.
+ -we can handle multiple type of ecxeption in a single catch block in java version 7 or above.
+        ex:
+            try
+            {
+            a =5/0;
+            y[10] = 50;
+            }
+            catch (ArithmeticException | ArrayIndexOutOfBoundException e)
+            
+            {
+            
+              System.out.println(e);
+            }
+          
+          
+    => CUSTOM MADE (USER DEFINED) EXCEPTION :
 
 
+        class MyException extends Exception 
+        {
+        public String toString()
+        {
+        return "MyException Object";
+        }
+        }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        public class Test{
+        
+        public static void main(string args [])
+        {
+         MyException e = new MyException();
+           System.out.println(e); // it will now print MyException Object
+        }
+        }
+        
 
 
 
